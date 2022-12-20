@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Picker</title>
+  </head>
+  <body>
+    <select name="dropdown_img" id="dropdown_img" onchange="gambar()">
+      <option hidden>---Pilih Gambar---</option>
+      <option value="gorila">Gorila</option>
+      <option value="singa">Singa</option>
+      <option value="elang">Elang</option>
+    </select>
+    <br />
+    <img alt="gambar" id="image" />
+
+    <script>
+      function gambar() {
+        let drop_img = document.getElementById("dropdown_img").value;
+        let image = document.getElementById("image");
+
+        if (drop_img == "gorila") {
+          image.setAttribute(
+            "src",
+            "https://cdn0-production-images-kly.akamaized.net/dM5ZZYMwwurKC7HTHCkrIQy4_JA=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1062412/original/057291300_1448086493-20151121-Gorilla-Uganda-reuters-3.jpg"
+          );
+          alert("Ini gambar gorila");
+        } else if (drop_img == "singa") {
+          image.setAttribute(
+            "src",
+            "https://asset-a.grid.id//crop/0x0:0x0/700x465/photo/bobofoto/original/2158_singa.jpg"
+          );
+          alert("Ini gambar singa");
+        } else if (drop_img == "elang") {
+          image.setAttribute(
+            "src",
+            "https://1.bp.blogspot.com/-t3l9o83PGPs/YBtMUB0QI7I/AAAAAAAAAmc/5Ax6v9sbkq8JKOvx1CIaVraAYZbf0GpMwCLcBGAsYHQ/s691/images%2B-%2B2021-02-04T082208.111.jpeg"
+          );
+          alert("Ini gambar elang");
+        } else {
+          alert("Tidak ada gambar");
+        }
+      }
+    </script>
+  </body>
+</html>
